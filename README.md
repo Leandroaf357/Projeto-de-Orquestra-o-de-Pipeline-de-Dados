@@ -33,3 +33,15 @@ O projeto adota a **Arquitetura Medalhão** (Bronze, Silver e Gold) processada d
 dbutils.notebook.run("./01_Ingestão de dados brutos", 120)
 dbutils.notebook.run("./02_Qualidade e limpeza de dados", 120)
 dbutils.notebook.run("./03_Business Aggregation para Power BI", 120)
+
+📊 Camada de Visualização (Terminal Power BI)
+A tabela Gold foi integrada ao Power BI por meio de autenticação de Token de Acesso Pessoal (PAT). O painel foi desenvolvido utilizando o padrão de design Block UI / Dark Theme, otimizando a legibilidade e o comportamento visual para simular um terminal financeiro real.
+
+Principais Indicadores e Visuais Desenvolvidos:
+Métricas de KPI: Preço Médio de Fechamento, Máxima Histórica, Mínima Histórica, Volume Total Negociado, Total de Dias Monitorados e Amplitude Macroeconômica.
+
+Análise de Tendência: Gráfico de linha contínua mapeando a evolução do preço do ativo ao longo dos anos.
+
+Análise de Sazonalidade: Gráficos de colunas verticais agrupando as médias de preço por mês e volume anualizado.
+
+Cálculos via DAX: Criação de medidas dinâmicas para controle de volatilidade diária (Amplitude de Preço) e captura pontual do último preço de mercado registrado.

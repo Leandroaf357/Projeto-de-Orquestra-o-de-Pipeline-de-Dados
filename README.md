@@ -50,4 +50,22 @@ dbutils.notebook.run("./01_Ingestão de dados brutos", 120)
 dbutils.notebook.run("./02_Qualidade e limpeza de dados", 120)
 dbutils.notebook.run("./03_Business Aggregation para Power BI", 120)
 
+# The number 120 at the end is the timeout (the maximum time, in seconds, allowed for the task to run)
+
+print("Starting the Bitcoin Data Pipeline...\n")
+
+print("Executing the Bronze Layer...")
+# The Bronze layer will be triggered and fetch records directly from /Volumes/bitcoin/bronze/dados
+dbutils.notebook.run("./02_Raw Data Ingestion", 120)
+
+print("Executing the Silver Layer...")
+# The Silver layer performs cleaning and validation
+dbutils.notebook.run("./03_Data Quality & Cleansing", 120)
+
+print("Executing the Gold Layer...")
+# The Gold layer finalizes calculations and aggregations
+dbutils.notebook.run("./04_Business Aggregation for Power BI", 120)
+
+print("\nPipeline orchestrated and completed successfully!")
+
 

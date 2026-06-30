@@ -38,7 +38,8 @@ dbutils.notebook.run("./01_Ingestão de dados brutos", 120)
 dbutils.notebook.run("./02_Qualidade e limpeza de dados", 120)
 dbutils.notebook.run("./03_Business Aggregation para Power BI", 120)
 
-📊 Camada de Visualização (Terminal Power BI)
+
+##📊 Camada de Visualização (Terminal Power BI)
 A tabela Gold foi integrada ao Power BI por meio de autenticação de Token de Acesso Pessoal (PAT). O painel foi desenvolvido utilizando o padrão de design Block UI / Dark Theme, otimizando a legibilidade e o comportamento visual para simular um terminal financeiro real.
 
 Principais Indicadores e Visuais Desenvolvidos:

@@ -28,6 +28,10 @@ O projeto adota a **Arquitetura Medalhão** (Bronze, Silver e Gold) processada d
 * **Notebook Mestre:** `00_Orquestrador_Pipeline`
 * Para mitigar as limitações de hardware local com ambientes conteinerizados tradicionais, a orquestração foi projetada especificamente na nuvem. O script gerencia dependências cronológicas e define travas de segurança (*timeout*) para cada etapa da execução.
 
+![Visão Geral do Terminal Bitcoin](bitcoin.png)
+
+![Detalhes de Volatilidade e Performance](bitcoin1.png)
+
 ```píton
 # Trecho da lógica de execução sequencial controlada
 dbutils.notebook.run("./01_Ingestão de dados brutos", 120)
